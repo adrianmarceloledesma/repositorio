@@ -1,53 +1,20 @@
-import styled from 'styled-components';
 import { skills } from '../data/projects';
-
-const SkillsWrapper = styled.section`
-  padding: ${({ theme }) => theme.spacing.xl} ${({ theme }) => theme.spacing.md};
-`;
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-`;
-
-const SectionTitle = styled.h2`
-  font-size: 2rem;
-  color: ${({ theme }) => theme.colors.primary};
-  text-align: center;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-`;
-
-const SkillsGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: ${({ theme }) => theme.spacing.sm};
-`;
-
-const SkillTag = styled.span`
-  background: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.text};
-  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
-  border-radius: 4px;
-  font-weight: 500;
-  transition: all 0.2s;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.accent};
-  }
-`;
+import { useLanguage } from '../context/LanguageContext';
 
 export const Skills = () => {
+  const { t } = useLanguage();
+
   return (
-    <SkillsWrapper id="skills">
-      <Container>
-        <SectionTitle>Skills</SectionTitle>
-        <SkillsGrid>
+    <section id="skills">
+      <div className="inner">
+        <div className="section-label">{t.skills.label}</div>
+        <h2 className="section-title">{t.skills.title}</h2>
+        <div className="skills-grid">
           {skills.map((skill) => (
-            <SkillTag key={skill}>{skill}</SkillTag>
+            <span key={skill} className="skill-tag">{skill}</span>
           ))}
-        </SkillsGrid>
-      </Container>
-    </SkillsWrapper>
+        </div>
+      </div>
+    </section>
   );
 };
