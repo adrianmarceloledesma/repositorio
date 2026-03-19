@@ -456,6 +456,20 @@ section {
   margin-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  #skills > .inner {
+    padding: 2rem 1.5rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .skills-grid {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (min-width: 600px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -684,6 +698,7 @@ section {
   font-size: 0.95rem;
   color: var(--text);
   font-weight: 500;
+  word-break: break-word;
 }
 
 .contact-card-arrow {
@@ -864,6 +879,26 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-brand {
+    padding: 1rem 0;
+  }
+
+  .footer-links-group {
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-links-group:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
 @media (min-width: 769px) {
