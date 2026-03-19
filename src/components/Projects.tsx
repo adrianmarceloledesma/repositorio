@@ -31,10 +31,10 @@ export const Projects = () => {
             </div>
             <div className="flex gap-4">
               {project.githubLink && (
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link github">GitHub</a>
               )}
               {project.demoLink && (
-                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">Demo</a>
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link demo">Demo</a>
               )}
             </div>
           </article>

@@ -583,21 +583,40 @@ section {
 .project-link {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--muted);
   text-decoration: none;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  transition: all 0.2s;
 }
 
-.project-link:hover {
+.project-link.github {
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: transparent;
+}
+
+.project-link.github:hover {
+  border-color: var(--blue);
   color: var(--blue);
 }
 
-.project-link::after {
+.project-link.demo {
+  color: #fff;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.project-link.demo:hover {
+  background: var(--blue-mid);
+  border-color: var(--blue-mid);
+}
+
+.project-link.demo::after {
   content: '↗';
 }
 
