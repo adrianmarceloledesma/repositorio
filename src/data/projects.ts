@@ -1,3 +1,5 @@
+import myTasksImg from '../img/mytasks.png' 
+
 export interface Project {
   id: number;
   title: string;
@@ -35,7 +37,7 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript'],
     githubLink: 'https://github.com/adrianmarceloledesma/todo-app',
     demoLink: 'https://mytasksargentina.netlify.app',
-    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/todo-app/master/image-1.png',
+    image: myTasksImg,
   },
   {
     id: 4,

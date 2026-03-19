@@ -142,13 +142,30 @@ nav {
 }
 
 .hero-role {
-  margin-top: 1.5rem;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   font-weight: 400;
-  color: var(--muted);
-  max-width: 540px;
+  color: var(--blue);
+  letter-spacing: 0.05em;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.6s;
+}
+
+.about-content {
+  margin-top: 1.5rem;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
 }
 
 .hero-cta {
