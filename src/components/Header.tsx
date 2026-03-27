@@ -28,6 +28,8 @@ export const Header = () => {
         </button>
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li><a href="#hero" onClick={closeMenu}>{t.nav.home}</a></li>
+          <li><a href="#about" onClick={closeMenu}>{t.nav.about}</a></li>
+          <li><a href="#experience" onClick={closeMenu}>{t.nav.experience}</a></li>
           <li><a href="#skills" onClick={closeMenu}>{t.nav.skills}</a></li>
           <li><a href="#projects" onClick={closeMenu}>{t.nav.projects}</a></li>
           <li><a href="#contact" onClick={closeMenu}>{t.nav.contact}</a></li>

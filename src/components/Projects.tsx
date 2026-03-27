@@ -23,7 +23,7 @@ export const Projects = () => {
               />
             )}
             <h3 className="project-name">{project.title}</h3>
-            <p className="project-desc">{project.description}</p>
+            <p className="project-desc">{t.projects.items.find((item) => item.id === project.id)?.description}</p>
             <div className="project-tech">
               {project.technologies.map((tech) => (
                 <span key={tech} className="tech-badge">{tech}</span>
